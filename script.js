@@ -6,16 +6,23 @@ const navItems = document.querySelectorAll('.nav-link');
 menuToggle.addEventListener('click', () => {
   navLinks.classList.toggle('active');
   const icon = menuToggle.querySelector('i');
-  icon.classList.toggle('fa-bars');
-  icon.classList.toggle('fa-times');
+  
+  if (navLinks.classList.contains('active')) {
+    icon.classList.remove('fa-bars');
+    icon.classList.add('fa-times');
+  } else {
+    icon.classList.remove('fa-times');
+    icon.classList.add('fa-bars');
+  }
 });
 
 // Close menu when clicking a link
 navItems.forEach(item => {
   item.addEventListener('click', () => {
     navLinks.classList.remove('active');
-    menuToggle.querySelector('i').classList.add('fa-bars');
-    menuToggle.querySelector('i').classList.remove('fa-times');
+    const icon = menuToggle.querySelector('i');
+    icon.classList.remove('fa-times');
+    icon.classList.add('fa-bars');
   });
 });
 
@@ -27,7 +34,8 @@ window.addEventListener('scroll', () => {
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
-    if (pageYOffset >= (sectionTop - 200)) {
+    // Offset for better user experience
+    if (pageYOffset >= (sectionTop - 250)) {
       current = section.getAttribute('id');
     }
   });
@@ -56,7 +64,7 @@ contactForm.addEventListener('submit', (e) => {
   // Simulate sending
   setTimeout(() => {
     btn.innerText = 'Message Sent!';
-    btn.style.background = '#00f2ea'; // Success color (Cyan)
+    btn.style.background = '#00f2ea'; 
     btn.style.color = '#000';
     formMessage.innerText = "Thanks! I'll get back to you soon.";
     formMessage.style.color = '#00f2ea';
@@ -64,7 +72,7 @@ contactForm.addEventListener('submit', (e) => {
     
     setTimeout(() => {
       btn.innerText = initialText;
-      btn.style.background = ''; // Reset to default CSS
+      btn.style.background = '';
       btn.style.color = '';
       btn.style.opacity = '1';
       formMessage.innerText = '';
