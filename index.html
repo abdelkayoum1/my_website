@@ -3,180 +3,188 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Abdou | Creative Developer</title>
+  
+  <!-- Google Fonts: 'Outfit' for a modern, geometric look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
   <link rel="stylesheet" href="style.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
 <body>
 
+  <!-- Ambient Background Glow -->
+  <div class="glow-bg"></div>
+
   <!-- ===== Navbar ===== -->
-  <header class="navbar">
-    <div class="logo">MyPortfolio</div>
-
-    <nav>
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="logo">ABDOU<span class="dot">.</span></a>
+      
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Work</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
-    </nav>
 
-    <div class="menu-toggle" id="menuToggle">&#9776;</div>
-  </header>
+      <div class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
 
-  <!-- ===== Home Section ===== -->
-  <section class="home" id="home">
-    <div class="home-content">
-      <h1>Hello, I'm <span>Abdou</span></h1>
-      <h2>Frontend Web Developer</h2>
+  <!-- ===== Hero Section ===== -->
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <span class="subtitle">Welcome to my portfolio</span>
+      <h1>I Build <span class="gradient-text">Digital Experiences</span> That Matter.</h1>
       <p>
-        I build modern, responsive, and user-friendly websites using
-        HTML, CSS, and JavaScript.
+        I am Abdou. A Frontend Developer passionate about crafting 
+        interactive, accessible, and stunning web interfaces.
       </p>
-      <a href="#projects" class="btn">View My Work</a>
+      <div class="hero-btns">
+        <a href="#projects" class="btn glow-btn">See My Work</a>
+        <a href="#contact" class="btn outline-btn">Let's Talk</a>
+      </div>
     </div>
   </section>
-  <!-- ===== About Section ===== -->
-<section class="about" id="about">
-  <div class="about-container">
-    
-    <div class="about-text">
-      <h2>About Me</h2>
-      <p>
-        I am a passionate Frontend Web Developer with a strong focus on creating
-        visually appealing and user-friendly websites. I enjoy transforming ideas
-        into real digital experiences using clean and efficient code.
-      </p>
-      <p>
-        With a solid foundation in HTML, CSS, and JavaScript, I specialize in building
-        responsive layouts, interactive interfaces, and modern web designs.
-        I am always eager to learn new technologies and improve my skills.
-      </p>
 
+  <!-- ===== About Section ===== -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-image-card">
+        <i class="fas fa-user-astronaut"></i>
+        <div class="exp-badge">
+          <span>3+</span> Years
+        </div>
+      </div>
+      
       <div class="about-info">
-        <div>
-          <h3>Experience</h3>
-          <span>3+ Years</span>
+        <h2 class="section-title">Who Am I?</h2>
+        <p>
+          I'm not just a coder; I'm a visual problem solver. My mission is to bridge the gap between 
+          design and engineering. I specialize in <strong>JavaScript, React, and Modern CSS</strong>.
+        </p>
+        
+        <div class="skills-wrapper">
+          <div class="skill-tag">HTML5</div>
+          <div class="skill-tag">CSS3 / SCSS</div>
+          <div class="skill-tag">JavaScript (ES6+)</div>
+          <div class="skill-tag">React.js</div>
+          <div class="skill-tag">Responsive UI</div>
+          <div class="skill-tag">Git & GitHub</div>
         </div>
-        <div>
-          <h3>Projects</h3>
-          <span>25+ Completed</span>
-        </div>
-        <div>
-          <h3>Clients</h3>
-          <span>15+ Worldwide</span>
+
+        <div class="stats-row">
+          <div class="stat">
+            <h3>25+</h3>
+            <p>Projects</p>
+          </div>
+          <div class="stat">
+            <h3>15+</h3>
+            <p>Clients</p>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="about-card">
-      <h3>What I Do</h3>
-      <ul>
-        <li>✔ Responsive Web Design</li>
-        <li>✔ UI / UX Implementation</li>
-        <li>✔ Website Optimization</li>
-        <li>✔ Frontend Performance</li>
-      </ul>
+  <!-- ===== Projects Section ===== -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Selected Works</h2>
+        <p>A collection of my best projects.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="card-glow"></div>
+          <div class="project-content">
+            <div class="icon-box"><i class="fas fa-laptop-code"></i></div>
+            <h3>Portfolio Website</h3>
+            <p>A high-performance personal site featuring modern animations and dark mode aesthetics.</p>
+            <div class="tech-stack">
+              <span>HTML</span><span>CSS</span><span>JS</span>
+            </div>
+            <a href="#" class="details-link">View Case <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="card-glow"></div>
+          <div class="project-content">
+            <div class="icon-box"><i class="fas fa-shopping-bag"></i></div>
+            <h3>E-Commerce UI</h3>
+            <p>A pixel-perfect landing page for a fashion brand, optimized for conversion and speed.</p>
+            <div class="tech-stack">
+              <span>Frontend</span><span>UX/UI</span>
+            </div>
+            <a href="#" class="details-link">View Case <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="card-glow"></div>
+          <div class="project-content">
+            <div class="icon-box"><i class="fas fa-tasks"></i></div>
+            <h3>Task App</h3>
+            <p>A productivity tool helping users organize their day with drag-and-drop functionality.</p>
+            <div class="tech-stack">
+              <span>JavaScript</span><span>LocalStorage</span>
+            </div>
+            <a href="#" class="details-link">View Case <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-  </div>
-</section>
- 
-
-<!-- ===== Projects Section ===== -->
-<section class="projects" id="projects">
-  <h2 class="section-title">My Projects</h2>
-
-  <div class="projects-container">
-
-    <div class="project-card">
-      <h3>Portfolio Website</h3>
-      <p>
-        A modern and responsive personal portfolio website designed to showcase
-        skills, projects, and professional experience.
-      </p>
-      <span class="tech">HTML • CSS • JavaScript</span>
-    </div>
-
-    <div class="project-card">
-      <h3>E-Commerce Landing Page</h3>
-      <p>
-        A visually appealing landing page for an online store with product sections,
-        smooth animations, and optimized performance.
-      </p>
-      <span class="tech">HTML • CSS • JavaScript</span>
-    </div>
-
-    <div class="project-card">
-      <h3>Task Management App</h3>
-      <p>
-        A simple task management application that allows users to add, delete,
-        and organize daily tasks efficiently.
-      </p>
-      <span class="tech">HTML • CSS • JavaScript</span>
-    </div>
-
-    <div class="project-card">
-      <h3>Business Website</h3>
-      <p>
-        A professional business website built with a clean layout, responsive
-        design, and user-focused navigation.
-      </p>
-      <span class="tech">HTML • CSS • JavaScript</span>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ===== Contact Section ===== -->
-<section class="contact" id="contact">
-  <h2 class="section-title">Contact Me</h2>
-
-  <div class="contact-container">
-
-
-
-    <form class="contact-form" id="contactForm">
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="email" id="email" placeholder="Your Email" required />
-      <textarea id="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-      
-    </form>
-    
-
-  </div>
-    <div class="contact-bottom">
-  <div class="contact-item">
-    <strong>Email:</strong>
-    <span>Abdelkayoumkh0@gmail.com</span>
-  </div>
-
-  <div class="contact-item">
-    <strong>WhatsApp:</strong>
-  <a href="https://api.whatsapp.com/send?phone=213776403662" target="_blank">
-  +213 776 40 36 62
+  <!-- ===== Contact Section ===== -->
+  <section class="contact" id="contact">
+    <div class="container contact-container">
+      <div class="contact-left">
+        <h2 class="section-title">Let's Create Something <br><span class="gradient-text">Extraordinary.</span></h2>
+        <p>I'm currently available for freelance work or full-time opportunities.</p>
+        
+        <div class="social-links">
+          <a href="mailto:abdelkayoumkh0@gmail.com?subject=Contact from Portfolio&body=Hello Abdelkayoum,"
+   class="social-btn">
+  <i class="fas fa-envelope"></i>
 </a>
-  </div>
+          <a href="https://www.linkedin.com/in/abdelkayoum-kh-" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://api.whatsapp.com/send?phone=213776403662" target="_blank" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
 
-  <div class="contact-item">
-    <strong>LinkedIn:</strong>
-    <a href="https://www.linkedin.com/in/abdelkayoum-kh-" target="_blank">
-      linkedin.com/in/abdelkayoum-kh-
-    </a>
-  </div>
-</div>
+      <form class="glass-form" id="contactForm">
+        <div class="input-group">
+          <input type="text" id="name" required placeholder="Name">
+        </div>
+        <div class="input-group">
+          <input type="email" id="email" required placeholder="Email">
+        </div>
+        <div class="input-group">
+          <textarea id="message" required placeholder="Tell me about your project..."></textarea>
+        </div>
+        <button type="submit" class="btn glow-btn full-width">Send Message</button>
+        <p id="formMessage" class="form-msg"></p>
+      </form>
+    </div>
+  </section>
 
-
-</section>
-
+  <footer>
+    <p>© 2025 Abdou. Built with <i class="fas fa-heart"></i> and Code.</p>
+  </footer>
 
   <script src="script.js"></script>
-
-  <button id="scrollTopBtn">↑</button>
-
 </body>
 </html>
