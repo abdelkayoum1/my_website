@@ -485,3 +485,50 @@ footer i { color: var(--secondary); }
   
   .glass-form { padding: 25px; }
 }
+
+
+/* ===== Form Styling (Big & Bold) ===== */
+
+.input-group {
+  margin-bottom: 20px; /* مسافة بين الخانات */
+}
+
+.input-group input, 
+.input-group textarea {
+  width: 100%;
+  padding: 20px; /* زدنا في الـ Padding باش تبان كبيرة */
+  background-color: #121212 !important; 
+  border: 1px solid rgba(255,255,255,0.2) !important;
+  color: white !important; 
+  border-radius: 12px; /* تدوير الحواف أكثر */
+  outline: none;
+  font-family: var(--font-main);
+  
+  /* هنا الصح: تكبير الخط والارتفاع */
+  font-size: 18px !important; /* الخط كبير وواضح */
+  height: 65px; /* ارتفاع ثابت وكبير للخانات */
+  transition: all 0.3s ease;
+}
+
+/* تكبير خانة الميساج وحدها */
+.input-group textarea {
+  height: 180px; /* الميساج يكون طويل */
+  resize: none;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+  border-color: var(--primary) !important;
+  background-color: #1a1a1a !important;
+  transform: translateY(-2px); /* حركة خفيفة كي تضغط عليها */
+  box-shadow: 0 5px 15px rgba(0, 242, 234, 0.1);
+}
+
+/* زر الإرسال نكبروه تاني */
+.full-width {
+  width: 100%;
+  padding: 18px; /* تكبير الزر */
+  font-size: 18px;
+  border-radius: 50px;
+  margin-top: 10px;
+}
